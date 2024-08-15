@@ -15,4 +15,4 @@ FROM base AS release
 WORKDIR /
 COPY --from=dependencies /root/.local /root/.local
 COPY get_wan_ip.py . 
-CMD ["python", "-u", "/cloudflare-ddns.py", "--repeat"]
+CMD ["python", "-u", "/get_wan_ip.py", "--repeat"]
